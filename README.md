@@ -8,7 +8,7 @@ __LESS-Mix__ - is a functional, powerful, convenient and easy at the same time (
 ### How to Install ###
 1. Download file "lessmix.less".
 2. Place the it in the folder with your project.
-3. Include the library in your LESS-file at the beginning of the document, the command: `@ import" elements.less "`;
+3. Include the library in your LESS-file at the beginning of the document, the command: `@import "lessmix.less "`;
  
 ### How to use ###
 The library includes 27 mixins divided into 8 sections:
@@ -26,7 +26,7 @@ The library includes 27 mixins divided into 8 sections:
     * `.rounded(@radius)` - set rounded corners. `@radius` - the value of the radius.
     * `.border-radius(@topRight, @bottomRight, @bottomLeft, @topLeft)` - set rounded corners for each corner individually.     Values are set in clockwise from the upper right corner. The default value - 0.
 * __Shadow Tools__
-    * `.box-shadow(@shadow)` - sets the shade. `@shadow` - line parameters narimer `inset 0 1px 2px # 666`. To specify multiple values shadows, use the escape character `~`, for example `~" inset 0 1px 2px # 666 ", 2px 1px 2px # 000" `.
+    * `.box-shadow(@shadow)` - sets the shade. `@shadow` - line parameters for example `inset 0 1px 2px # 666`. To specify multiple values shadows, use the escape character `~`, for example `~" inset 0 1px 2px # 666 ", 2px 1px 2px # 000" `.
     * `.outer-shadow(@x, @y, @blur, @alpha)` - adds to the block shade. `@x` and `@y` indentation axes, `@blur` - force blur, `@alpha` - transparency of blur (default: _ 0 1px 2px 0.1_).
     * `.inner-shadow(@x, @y, @blur, @alpha)` - adds an inner shadow. `@x` and `@y` indentation axes, `@blur` - force blur, `@alpha` - force shadow (default: _ 0 1px 2px 0.4_).
 * __Transition Tools__
@@ -59,7 +59,7 @@ __LESS-Mix__ - это функциональная, мощная, удобная
 ### Как установить ###
 1. Скачать файл "lessmix.less".
 2. Поместите его в папке с вашим проектом.
-3. Включить библиотеку в ваш LESS-файл, в начале документа, командой: `@import "elements.less";`
+3. Включить библиотеку в ваш LESS-файл, в начале документа, командой: `@import "lessmix.less";`
 
 ### Как использовать ###
 Библиотека включает 27 примешаний разбитых на 8 секций:
@@ -77,7 +77,7 @@ __LESS-Mix__ - это функциональная, мощная, удобная
     * `.rounded(@radius)` - устанавливает скругленные углы. `@radius` - значение радиуса.
     * `.border-radius(@topRight, @bottomRight, @bottomLeft, @topLeft)` - устанавливает скругленые углы для каждого угла индивидуально. Значения задаются за часовой стрелкой начиная от верхнего правого угла. Значение по-умолчанию - 0.
 * __Shadow Tools__
-    * `.box-shadow(@shadow)` - устанавливает тень. `@shadow` - строка параметров, наример `inset 0 1px 2px #666`. Чтобы задать несколько значений теней (мультитень) используйте символ екранирования `~`, например `~"inset 0 1px 2px #666", 2px 1px 2px #000"`.
+    * `.box-shadow(@shadow)` - устанавливает тень. `@shadow` - строка параметров, например `inset 0 1px 2px #666`. Чтобы задать несколько значений теней (мультитень) используйте символ екранирования `~`, например `~"inset 0 1px 2px #666", 2px 1px 2px #000"`.
     * `.outer-shadow(@x, @y, @blur, @alpha)` - добавляет к блоку тень. `@x` и `@y` отступы осей, `@blur` - сила размытия, `@alpha` - прозрачнось размытия (по-умолчанию: _0 1px 2px 0.1_). 
     * `.inner-shadow(@x, @y, @blur, @alpha)` - добавляет внутренею тень. `@x` и `@y` отступы осей, `@blur` - сила размытия, `@alpha` - сила тени (по-умолчанию: _0 1px 2px 0.4_).
 * __Transition Tools__
