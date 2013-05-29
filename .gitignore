@@ -6,3 +6,5 @@
 *.sublime-workspace
 sftp-config.json
 *.txt
+*.zip
+*.rar

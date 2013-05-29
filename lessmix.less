@@ -1,34 +1,34 @@
-/*---------------------------------------------------
-  |  LESS Mix 1.1                                   |
-  ---------------------------------------------------
-  | Cross browser, comfortable and easy LESS mixins |
-  | Copyright 2013 Denys Dovhan                     |
-  -------------------------------------------------*/
+//   ---------------------------------------------------
+//   |  LESS Mix 1.1                                   |
+//   ---------------------------------------------------
+//   | Cross browser, comfortable and easy LESS mixins |
+//   | Copyright 2013 Denys Dovhan                     |
+//   ---------------------------------------------------
 
 
-// 			Size and Position
+//      Size and Position
 // ====================================
 
 // Size
 .size(@width, @height) {
-	width: @width;
-	height: @height;
+  width: @width;
+  height: @height;
 }
 
 // Square
 .square(@size) {
-	width: @size;
-	height: @size;
+  width: @size;
+  height: @size;
 }
 
 // Center align
-.center {
-	margin-left: auto;
-	margin-right: auto;
+.center() {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
-// 					Gradient Tools
+//          Gradient Tools
 // =================================================
 
 // Vertical gradient
@@ -80,7 +80,7 @@
 }
 
 
-// 				Border Radius Tools
+//        Border Radius Tools
 // ==============================================
 
 // Rounded 
@@ -111,7 +111,7 @@
 }
 
 
-// 				Shadow Tools
+//        Shadow Tools
 // =======================================
 
 // Basic box shadow
@@ -136,7 +136,7 @@
 }
 
 
-// 			Transition Tools
+//      Transition Tools
 // ====================================
 
 // Transition
@@ -171,55 +171,55 @@
 }
 
 
-// 	 			  Transform Tools
+//          Transform Tools
 // ==============================================
 
 // Basic transform
 .transform(@transform) {
-  	-webkit-transform: @transform;
-  	   -moz-transform: @transform;
-  	   	-ms-transform: @transform;
-		 -o-transform: @transform;
-  			transform: @transform;
+    -webkit-transform: @transform;
+       -moz-transform: @transform;
+        -ms-transform: @transform;
+     -o-transform: @transform;
+        transform: @transform;
 }
 
 // Rotate
 .rotate(@deg) {
-	.transform(rotate(@deg));
+  .transform(rotate(@deg));
 }
 
 // Scale
 .scale(@ratio) {
-	.transform(scale(@ratio));
+  .transform(scale(@ratio));
 }
 
 // Translate
 .translate(@x, @y) {
-	.transform(translate(@x, @y));
+  .transform(translate(@x, @y));
 }
 
 
-// 				More Tools
+//        More Tools
 // ====================================
 
 // Background clip
 .background-clip(@argument: padding-box) {
-	-webkit-background-clip: @argument;
-	   -moz-background-clip: @argument;
-  			background-clip: @argument;
+  -webkit-background-clip: @argument;
+     -moz-background-clip: @argument;
+        background-clip: @argument;
 }
 
 // Box sizing
 .box-sizing(@sizing: border-box) {
-	-webkit-box-sizing: @sizing;
-	   -moz-box-sizing: @sizing;
-		-ms-box-sizing: @sizing;
-  			box-sizing: @sizing;
+  -webkit-box-sizing: @sizing;
+     -moz-box-sizing: @sizing;
+    -ms-box-sizing: @sizing;
+        box-sizing: @sizing;
 }
 
 // User select
 .user-select(@select: none) {
-	-webkit-user-select: @select;
+  -webkit-user-select: @select;
        -moz-user-select: @select;
         -ms-user-select: @select;
          -o-user-select: @select;
@@ -228,35 +228,40 @@
 
 // Opacity
 .opacity(@opacity: 0.5) {
-	-webkit-opacity: @opacity;
-   	 -khtml-opacity: @opacity;
-	   -moz-opacity: @opacity;
-  	opacity: @opacity;
-  	@opperc: @opacity * 100;
-  	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
-  		filter: ~"alpha(opacity=@{opperc})";
+  -webkit-opacity: @opacity;
+     -khtml-opacity: @opacity;
+     -moz-opacity: @opacity;
+    opacity: @opacity;
+    @opperc: @opacity * 100;
+    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+      filter: ~"alpha(opacity=@{opperc})";
 }
 
 
-// 			Develop and Testing Tools
+//      Develop and Testing Tools
 // ============================================
 
+// Hide block
+.hide() {
+  display: block;
+}
+
 // Hide conntent
-.hide {
-	font: 0/0 a;
-	border: 0;
-	color: transparent;
-	background-color: transparent;
-	text-shadow: none;
-	.box-shadow(none);	
+.hide-text() {
+  font: 0/0 a;
+  border: 0;
+  color: transparent;
+  background-color: transparent;
+  text-shadow: none;
+  .box-shadow(none);  
 }
 
 // 1px solid border
-.test-border {
-	border: 1px solid #000;
+.test-border() {
+  border: 1px solid #000;
 }
 
 // Reset filers for IE
-.reset-filter {
-	filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+.reset-filter() {
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
 }
