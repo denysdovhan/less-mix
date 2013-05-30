@@ -228,13 +228,9 @@
 
 // Opacity
 .opacity(@opacity: 0.5) {
-  -webkit-opacity: @opacity;
-     -khtml-opacity: @opacity;
-     -moz-opacity: @opacity;
-    opacity: @opacity;
-    @opperc: @opacity * 100;
-    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
-      filter: ~"alpha(opacity=@{opperc})";
+  opacity: @opacity;
+  @opperc: @opacity * 100;
+  filter: ~"alpha(opacity=@{opperc})";
 }
 
 
