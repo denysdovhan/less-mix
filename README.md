@@ -8,7 +8,7 @@ __LESS-Mix__ - is a functional, powerful, convenient and easy at the same time (
 ### How to Install ###
 1. Download file "lessmix.less".
 2. Place the it in the folder with your project.
-3. Include the library in your LESS-file at the beginning of the document, the command: `@import "lessmix.less "`;
+3. Include the library in your LESS-file at the beginning of the document, the command: `@import "lessmix.less"`;
  
 ### How to use ###
 The library includes 27 mixins divided into 8 sections:
@@ -18,7 +18,7 @@ The library includes 27 mixins divided into 8 sections:
     * `.square(@size)` - specifies the size the square element. `@size` - the size of the element.
     * `.center` - alignment block in the center.
 * __Gradient Tools__
-    * `.v-gradient(@startColor, @stopColor` - vertical gradient. `@ startColor` - color of the gradient origin, `@ stopColor` - the color of the gradient stop. The colors are approved from the top down. The background color for browsers that do not supported gradients calculated automatically.
+    * `.v-gradient(@startColor, @stopColor` - vertical gradient. `@startColor` - color of the gradient origin, `@stopColor` - the color of the gradient stop. The colors are approved from the top down. The background color for browsers that do not supported gradients calculated automatically.
     * `.h-gradient(@startColor, @stopColor)` - horizontal gradient. `@startColor` - color of the gradient origin, `@stopColor` - the color of the gradient stop. The colors are approved from left to right. The background color for browsers that do not supported gradients calculated automatically.
     * `.d-gradient(@startColor, @stopColor, @deg)` - gradient with arbitrary slope. `@startColor` - color of the gradient origin, `@stopColor` - the color of the gradient stop, `@deg` - angle (default: _45deg_). The background color for browsers that do not supported gradients calculated automatically.
     * `.r-gradient(@innerColor, @outerColor)` - radial gradient. `@innerColor` - the color inside, `@outerColor` - the exterior color of the gradient. The background color for browsers that do not supported gradients calculated automatically.
