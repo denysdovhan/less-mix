@@ -33,7 +33,7 @@
 
 // Vertical gradient
 .v-gradient(@startColor: #aaa, @stopColor: #000) {
-  background: @startColor;
+  background: mix(@startColor, @stopColor, 50%);
   background: -moz-linear-gradient(top, @startColor 0%, @stopColor 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@startColor), color-stop(100%,@stopColor));
   background: -webkit-linear-gradient(top,  @startColor 0%,@stopColor 100%);
@@ -45,7 +45,7 @@
 
 // Horizontal gradient
 .h-gradient(@startColor: #aaa, @stopColor: #000) {
-  background: @startColor;
+  background: mix(@startColor, @stopColor, 50%);
   background: -moz-linear-gradient(left, @startColor 0%, @stopColor 100%);
   background: -webkit-gradient(linear, left top, right top, color-stop(0%,@startColor), color-stop(100%,@stopColor));
   background: -webkit-linear-gradient(left,  @startColor 0%,@stopColor 100%);
