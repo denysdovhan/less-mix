@@ -177,8 +177,8 @@
     -webkit-transform: @transform;
        -moz-transform: @transform;
         -ms-transform: @transform;
-     -o-transform: @transform;
-        transform: @transform;
+         -o-transform: @transform;
+            transform: @transform;
 }
 
 // Rotate
@@ -211,17 +211,17 @@
 .box-sizing(@sizing: border-box) {
   -webkit-box-sizing: @sizing;
      -moz-box-sizing: @sizing;
-    -ms-box-sizing: @sizing;
-        box-sizing: @sizing;
+      -ms-box-sizing: @sizing;
+          box-sizing: @sizing;
 }
 
 // User select
 .user-select(@select: none) {
   -webkit-user-select: @select;
-       -moz-user-select: @select;
-        -ms-user-select: @select;
-         -o-user-select: @select;
-            user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select;
+       -o-user-select: @select;
+          user-select: @select;
 }
 
 // Opacity
@@ -229,6 +229,13 @@
   opacity: @opacity;
   @opperc: @opacity * 100;
   filter: ~"alpha(opacity=@{opperc})";
+}
+
+// Display: inline-block
+.inline-block() {
+  display: inline-block;
+  *zoom: 1; /* Fix for IE7 */
+  *display: inline; /* Fix for IE7 */
 }
 
 
