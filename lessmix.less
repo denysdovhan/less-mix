@@ -33,28 +33,26 @@
 
 // Vertical gradient
 .v-gradient(@startColor: #aaa, @stopColor: #000) {
-    background-image: -moz-linear-gradient(top, @startColor, @stopColor);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@stopColor));
-    background-image: -webkit-linear-gradient(top, @startColor, @stopColor);
-    background-image: -o-linear-gradient(top, @startColor, @stopColor); 
-    background-image: linear-gradient(to bottom, @startColor, @stopColor);
-
-    background-color: mix(@startColor, @stopColor, 60%);
-    background-repeat: repeat-x;
-    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@stopColor)));
+  background: mix(@startColor, @stopColor, 50%);
+  background: -moz-linear-gradient(top, @startColor 0%, @stopColor 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@startColor), color-stop(100%,@stopColor));
+  background: -webkit-linear-gradient(top,  @startColor 0%,@stopColor 100%);
+  background: -o-linear-gradient(top, @startColor 0%, @stopColor 100%);
+  background: -ms-linear-gradient(top, @startColor 0%, @stopColor 100%); 
+  background: linear-gradient(to bottom, @startColor 0%, @stopColor 100%);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@stopColor));
 }
 
 // Horizontal gradient
 .h-gradient(@startColor: #aaa, @stopColor: #000) {
-    background-image: -moz-linear-gradient(left, @startColor, @stopColor);
-    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@stopColor));
-    background-image: -webkit-linear-gradient(left, @startColor, @stopColor);
-    background-image: -o-linear-gradient(left, @startColor, @stopColor);
-    background-image: linear-gradient(to right, @startColor, @stopColor);
-
-    background-color: mix(@startColor, @stopColor, 60%);
-    background-repeat: repeat-x;
-    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', stopColorstr='%d', GradientType=1)",argb(@startColor),argb(@stopColor)));
+  background: mix(@startColor, @stopColor, 50%);
+  background: -moz-linear-gradient(left, @startColor 0%, @stopColor 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,@startColor), color-stop(100%,@stopColor));
+  background: -webkit-linear-gradient(left,  @startColor 0%,@stopColor 100%);
+  background: -o-linear-gradient(left, @startColor 0%, @stopColor 100%);
+  background: -ms-linear-gradient(top, @startColor 0%, @stopColor 100%);
+  background: linear-gradient(to right, @startColor 0%, @stopColor 100%);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@stopColor));
 }
 
 // Directional gradient
