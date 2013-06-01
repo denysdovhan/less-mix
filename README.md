@@ -44,6 +44,7 @@ The library includes 27 mixins divided into 8 sections:
     * `.box-sizing(@sizing)` - used to change the algorithm for calculating the width and height of the element. (default: _border-box_)
     * `.user-select(@select)` - allows you to disable text selection. For example, the menu items. (default: _none_)
     * `.opacity(@opacity)` - adds transparency to the element. 0 - fully transparent, 1 - opaque. (default: _0.5_)
+    * `.inline-block()` - cross-browser analog `display: inline-block;`
 * __Develop and Testing Tools__
     * `.hide` - hides the block. ( _display_ : _none_)
     * `.hide-text` - allows you to hide all the text in the block.
@@ -95,6 +96,7 @@ __LESS-Mix__ - это функциональная, мощная, удобная
     * `.box-sizing(@sizing)` - применяется для изменения алгоритма расчета ширины и высоты элемента. (по-умолчанию: _border-box_)
     * `.user-select(@select)` - позволяет отключить выделение текста. Например, в пунктах меню. (по-умолчанию: _none_).
     * `.opacity(@opacity)` - добавляет прозрачность к элементу. 0 - полностью прозрачный, 1 - непрозрачный. (по-умолчанию: _0.5_).
+    * `.inline-block()` - кросбрауезерный аналог `display: inline-block;`
 * __Develop and Testing Tools__
     * `.hide()` - прячет блок. ( _display_ : _none_).
     * `.hide-text()` - позволяет спрятать весь текст в блоке.
