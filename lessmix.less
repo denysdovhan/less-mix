@@ -89,7 +89,11 @@
 }
 
 // Borner radius
-.border-radius(@topRight: 0, @bottomRight: 0, @bottomLeft: 0, @topLeft: 0) {
+.border-radius(@topLeft: 0, @topRight: 0, @bottomRight: 0, @bottomLeft: 0) {
+    // Top Left
+    -webkit-border-top-left-radius: @topLeft;    
+        -moz-border-radius-topleft: @topLeft;   
+            border-top-left-radius: @topLeft;
     // Top Right
     -webkit-border-top-right-radius: @topRight;
         -moz-border-radius-topright: @topRight;
@@ -98,14 +102,10 @@
     -webkit-border-bottom-right-radius: @bottomRight;
         -moz-border-radius-bottomright: @bottomRight;
             border-bottom-right-radius: @bottomRight;
-    // bottom Left
+    // Bottom Left
     -webkit-border-bottom-left-radius: @bottomLeft;
         -moz-border-radius-bottomleft: @bottomLeft;
             border-bottom-left-radius: @bottomLeft;
-    // Top Right
-    -webkit-border-top-left-radius: @topLeft;    
-        -moz-border-radius-topleft: @topLeft;   
-            border-top-left-radius: @topLeft;
 }
 
 
