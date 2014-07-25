@@ -18,10 +18,10 @@ The library includes 27 mixins divided into 8 sections:
     * `.square(@size)` - specifies the size the square element. `@size` - the size of the element.
     * `.center` - alignment block in the center.
 * __Gradient Tools__
-    * `.v-gradient(@startColor, @stopColor` - vertical gradient. `@startColor` - color of the gradient origin, `@stopColor` - the color of the gradient stop. The colors are approved from the top down. The background color for browsers that do not supported gradients calculated automatically.
-    * `.h-gradient(@startColor, @stopColor)` - horizontal gradient. `@startColor` - color of the gradient origin, `@stopColor` - the color of the gradient stop. The colors are approved from left to right. The background color for browsers that do not supported gradients calculated automatically.
-    * `.d-gradient(@startColor, @stopColor, @deg)` - gradient with arbitrary slope. `@startColor` - color of the gradient origin, `@stopColor` - the color of the gradient stop, `@deg` - angle (default: _45deg_). The background color for browsers that do not supported gradients calculated automatically.
-    * `.r-gradient(@innerColor, @outerColor)` - radial gradient. `@innerColor` - the color inside, `@outerColor` - the exterior color of the gradient. The background color for browsers that do not supported gradients calculated automatically.
+    * `#gradient>.vertical(@startColor, @stopColor)` - vertical gradient. `@startColor` - color of the gradient origin, `@stopColor` - the color of the gradient stop. The colors are approved from the top down. The background color for browsers that do not supported gradients calculated automatically.
+    * `#gradient>.horizontal(@startColor, @stopColor)` - horizontal gradient. `@startColor` - color of the gradient origin, `@stopColor` - the color of the gradient stop. The colors are approved from left to right. The background color for browsers that do not supported gradients calculated automatically.
+    * `#gradient>.directional(@startColor, @stopColor, @deg)` - gradient with arbitrary slope. `@startColor` - color of the gradient origin, `@stopColor` - the color of the gradient stop, `@deg` - angle (default: _45deg_). The background color for browsers that do not supported gradients calculated automatically.
+    * `#gradient>.radial(@innerColor, @outerColor)` - radial gradient. `@innerColor` - the color inside, `@outerColor` - the exterior color of the gradient. The background color for browsers that do not supported gradients calculated automatically.
 * __Border Radius Tools__
     * `.rounded(@radius)` - set rounded corners. `@radius` - the value of the radius.
     * `.border-radius(@topRight, @bottomRight, @bottomLeft, @topLeft)` - set rounded corners for each corner individually.     Values are set in clockwise from the upper right corner. The default value - 0.
@@ -50,8 +50,12 @@ The library includes 27 mixins divided into 8 sections:
     * `.hide-text` - allows you to hide all the text in the block.
     * `.test-border` - a quick way to block a black border of 1 pixel.
     * `.reset-filter` - property allows you to disable the IE-filters.
-    
 
+### Project ###
+
+The project created an enthusiast for all web designers, designed to simplify the work with the frequently used properties and make the code more readable and convenient. 
+The project __LESS-Mix__ - is an open-source code,and is based on the draft of the dynamic stylistic markup language [LESS](http://lesscss.org/) from [Alexis Sellier](http://cloudhead.io/). I will be grateful for the positive feedback well as for criticizing. 
+Waiting for your feedbacks on the: [email@denysdovhan.com](mailto:email@denysdovhan.com)
 
 На Русском
 -----------
@@ -70,10 +74,10 @@ __LESS-Mix__ - это функциональная, мощная, удобная
     * `.square(@size)` - задает размер квадратного элемента. `@size` - размер элемента.
     * `.center` - выравнивание блока по центру.
 * __Gradient Tools__
-    * `.v-gradient(@startColor, @stopColor` - вертикальный градиент. `@startColor` - цвет начала градиента, `@stopColor` - цвет остановки градиента. Цвета применяються сверху вниз. Фоновый цвет для браузеров которые не поддержывают градиенты исчисляется автоматически.
-    * `.h-gradient(@startColor, @stopColor)` - горизонтальный градиент. `@startColor` - цвет начала градиента, `@stopColor` - цвет остановки градиента. Цвета применяються слева направо. Фоновый цвет для браузеров которые не поддержывают градиенты исчисляется автоматически.
-    * `.d-gradient(@startColor, @stopColor, @deg)`- градиент с произвольным углом наклона. `@startColor` - цвет начала градиента, `@stopColor` - цвет остановки градиента, `@deg` - угол наклона (по-умолчанию: _45deg_). Фоновый цвет для браузеров которые не поддержывают градиенты исчисляется автоматически.
-    * `.r-gradient(@innerColor, @outerColor)` - радиальный градиент. `@innerColor` - внутрений цвет, `@outerColor` - внешний цвет градиента. Фоновый цвет для браузеров которые не поддержывают градиенты исчисляется автоматически.
+    * `#gradient>.vertical(@startColor, @stopColor)` - вертикальный градиент. `@startColor` - цвет начала градиента, `@stopColor` - цвет остановки градиента. Цвета применяються сверху вниз. Фоновый цвет для браузеров которые не поддержывают градиенты исчисляется автоматически.
+    * `#gradient>.horizontal(@startColor, @stopColor)` - горизонтальный градиент. `@startColor` - цвет начала градиента, `@stopColor` - цвет остановки градиента. Цвета применяються слева направо. Фоновый цвет для браузеров которые не поддержывают градиенты исчисляется автоматически.
+    * `#gradient>.directional(@startColor, @stopColor, @deg)`- градиент с произвольным углом наклона. `@startColor` - цвет начала градиента, `@stopColor` - цвет остановки градиента, `@deg` - угол наклона (по-умолчанию: _45deg_). Фоновый цвет для браузеров которые не поддержывают градиенты исчисляется автоматически.
+    * `#gradient>.radial(@innerColor, @outerColor)` - радиальный градиент. `@innerColor` - внутрений цвет, `@outerColor` - внешний цвет градиента. Фоновый цвет для браузеров которые не поддержывают градиенты исчисляется автоматически.
 * __Border Radius Tools__
     * `.rounded(@radius)` - устанавливает скругленные углы. `@radius` - значение радиуса.
     * `.border-radius(@topRight, @bottomRight, @bottomLeft, @topLeft)` - устанавливает скругленые углы для каждого угла индивидуально. Значения задаются за часовой стрелкой начиная от верхнего правого угла. Значение по-умолчанию - 0.

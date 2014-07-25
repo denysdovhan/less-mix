@@ -1,4 +1,4 @@
-# 2.0
+# v2.0
 - **Major changes in gradient tools:**
 From now on appeal to the gradient occurs through `#gradient>.vertical()`, `#gradient>.hotrizontal()`, `#gradient>.directional()`, `#gradient>.radial()`
 
