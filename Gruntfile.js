@@ -73,8 +73,10 @@ module.exports = function(grunt) {
 
 		// Watch task for development
 		watch: {
-			files: ['docs/source'],
-			tasks: ['less:development', 'copy']
+			development: {
+				files: ['docs/source/**/*'],
+				tasks: ['less:development', 'copy']
+			}
 		}
 	});
 
