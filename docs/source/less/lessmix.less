@@ -1,0 +1,268 @@
+//   ---------------------------------------------------
+//   |  LESS Mix 2.0                                   |
+//   ---------------------------------------------------
+//   | Cross browser, comfortable and easy LESS mixins |
+//   | Copyright 2013 Denys Dovhan                     |
+//   ---------------------------------------------------
+
+
+//      Size and Position
+// ====================================
+
+// Size
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+// Square
+.square(@size) {
+  width: @size;
+  height: @size;
+}
+
+// Center align
+.center() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+//          Gradient Tools
+// =================================================
+#gradient {
+// Vertical gradient
+  .vertical(@startColor: #aaa, @stopColor: #000) {
+    background: mix(@startColor, @stopColor, 50%);
+    background: -moz-linear-gradient(top, @startColor 0%, @stopColor 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@startColor), color-stop(100%,@stopColor));
+    background: -webkit-linear-gradient(top,  @startColor 0%,@stopColor 100%);
+    background: -o-linear-gradient(top, @startColor 0%, @stopColor 100%);
+    background: -ms-linear-gradient(top, @startColor 0%, @stopColor 100%); 
+    background: linear-gradient(to bottom, @startColor 0%, @stopColor 100%);
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@stopColor));
+  }
+
+  // Horizontal gradient
+  .horizontal(@startColor: #aaa, @stopColor: #000) {
+    background: mix(@startColor, @stopColor, 50%);
+    background: -moz-linear-gradient(left, @startColor 0%, @stopColor 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,@startColor), color-stop(100%,@stopColor));
+    background: -webkit-linear-gradient(left,  @startColor 0%,@stopColor 100%);
+    background: -o-linear-gradient(left, @startColor 0%, @stopColor 100%);
+    background: -ms-linear-gradient(top, @startColor 0%, @stopColor 100%);
+    background: linear-gradient(to right, @startColor 0%, @stopColor 100%);
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@stopColor));
+  }
+
+  // Directional gradient
+  .directional(@startColor: #aaa, @stopColor: #000, @deg: 45deg) {
+      background-image: -moz-linear-gradient(@deg, @startColor, @stopColor);
+      background-image: -webkit-linear-gradient(@deg, @startColor, @stopColor);
+      background-image: -o-linear-gradient(@deg, @startColor, @stopColor); 
+      background-image: linear-gradient(@deg, @startColor, @stopColor);
+    
+      background-color: mix(@startColor, @stopColor, 60%);
+      background-repeat: repeat-x;
+  }
+  
+  // Radial gradient
+  .radial(@innerColor: #aaa, @outerColor: #000) {
+      background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
+      background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
+      background-image: -moz-radial-gradient(circle, @innerColor, @outerColor);
+      background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
+  
+      background-color: mix(@innerColor, @outerColor, 60%);
+      background-repeat: no-repeat;
+  }
+}
+
+//        Border Radius Tools
+// ==============================================
+
+// Rounded 
+.rounded(@radius) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+}
+
+// Borner radius
+.border-radius(@topLeft: 0, @topRight: 0, @bottomRight: 0, @bottomLeft: 0) {
+    // Top Left
+    -webkit-border-top-left-radius: @topLeft;    
+        -moz-border-radius-topleft: @topLeft;   
+            border-top-left-radius: @topLeft;
+    // Top Right
+    -webkit-border-top-right-radius: @topRight;
+        -moz-border-radius-topright: @topRight;
+            border-top-right-radius: @topRight;
+    // Bottom Right
+    -webkit-border-bottom-right-radius: @bottomRight;
+        -moz-border-radius-bottomright: @bottomRight;
+            border-bottom-right-radius: @bottomRight;
+    // Bottom Left
+    -webkit-border-bottom-left-radius: @bottomLeft;
+        -moz-border-radius-bottomleft: @bottomLeft;
+            border-bottom-left-radius: @bottomLeft;
+}
+
+
+//        Shadow Tools
+// =======================================
+
+// Basic box shadow
+.box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow;
+       -moz-box-shadow: @shadow;
+            box-shadow: @shadow;
+}
+
+// Outer shadow
+.outer-shadow(@x: 0, @y: 1px, @blur: 2px, @alpha: 0.1) {
+    -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+            box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+
+// Inner shadow
+.inner-shadow(@x: 0, @y: 1px, @blur: 2px, @alpha: 0.4) {
+    -webkit-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
+            box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
+}
+
+
+//      Transition Tools
+// ====================================
+
+// Transition
+.transition(@transition) {
+    -webkit-transition: @transition;
+       -moz-transition: @transition;
+         -o-transition: @transition;
+            transition: @transition;
+}
+
+// Transition all
+.transition-all(@duration: 0.2s, @delay: ease) {
+    -webkit-transition: all @duration @delay;
+       -moz-transition: all @duration @delay;
+         -o-transition: all @duration @delay;
+            transition: all @duration @delay;
+}
+
+// Transition duration
+.transition-duration(@transition-duration) {
+    -webkit-transition-duration: @transition-duration;
+       -moz-transition-duration: @transition-duration;
+         -o-transition-duration: @transition-duration;
+            transition-duration: @transition-duration;
+}
+// Transition delay
+.transition-delay(@transition-delay) {
+    -webkit-transition-delay: @transition-delay;
+       -moz-transition-delay: @transition-delay;
+         -o-transition-delay: @transition-delay;
+            transition-delay: @transition-delay;
+}
+
+
+//          Transform Tools
+// ==============================================
+
+// Basic transform
+.transform(@transform) {
+    -webkit-transform: @transform;
+       -moz-transform: @transform;
+        -ms-transform: @transform;
+         -o-transform: @transform;
+            transform: @transform;
+}
+
+// Rotate
+.rotate(@deg) {
+  .transform(rotate(@deg));
+}
+
+// Scale
+.scale(@ratio) {
+  .transform(scale(@ratio));
+}
+
+// Translate
+.translate(@x, @y) {
+  .transform(translate(@x, @y));
+}
+
+
+//        More Tools
+// ====================================
+
+// Background clip
+.background-clip(@argument: padding-box) {
+  -webkit-background-clip: @argument;
+     -moz-background-clip: @argument;
+        background-clip: @argument;
+}
+
+// Box sizing
+.box-sizing(@sizing: border-box) {
+  -webkit-box-sizing: @sizing;
+     -moz-box-sizing: @sizing;
+      -ms-box-sizing: @sizing;
+          box-sizing: @sizing;
+}
+
+// User select
+.user-select(@select: none) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select;
+       -o-user-select: @select;
+          user-select: @select;
+}
+
+// Opacity
+.opacity(@opacity: 0.5) {
+  opacity: @opacity;
+  @opperc: @opacity * 100;
+  filter: ~"alpha(opacity=@{opperc})";
+}
+
+// Display: inline-block
+.inline-block() {
+  display: inline-block;
+  *zoom: 1; /* Fix for IE7 */
+  *display: inline; /* Fix for IE7 */
+}
+
+
+//      Develop and Testing Tools
+// ============================================
+
+// Hide block
+.hide() {
+  display: none;
+}
+
+// Hide conntent
+.hide-text() {
+  font: 0/0 a;
+  border: 0;
+  color: transparent;
+  background-color: transparent;
+  text-shadow: none;
+  .box-shadow(none);  
+}
+
+// 1px solid border
+.test-border() {
+  border: 1px solid #000;
+}
+
+// Reset filers for IE
+.reset-filter() {
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}
