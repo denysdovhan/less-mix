@@ -1,0 +1,50 @@
+//     Gradient Tools
+// ----------------------
+
+#gradient {
+// Vertical gradient
+  .vertical(@startColor: #aaa, @stopColor: #000) {
+    background: mix(@startColor, @stopColor, 50%);
+    background: -moz-linear-gradient(top, @startColor 0%, @stopColor 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@startColor), color-stop(100%,@stopColor));
+    background: -webkit-linear-gradient(top,  @startColor 0%,@stopColor 100%);
+    background: -o-linear-gradient(top, @startColor 0%, @stopColor 100%);
+    background: -ms-linear-gradient(top, @startColor 0%, @stopColor 100%); 
+    background: linear-gradient(to bottom, @startColor 0%, @stopColor 100%);
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@stopColor));
+  }
+
+  // Horizontal gradient
+  .horizontal(@startColor: #aaa, @stopColor: #000) {
+    background: mix(@startColor, @stopColor, 50%);
+    background: -moz-linear-gradient(left, @startColor 0%, @stopColor 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,@startColor), color-stop(100%,@stopColor));
+    background: -webkit-linear-gradient(left,  @startColor 0%,@stopColor 100%);
+    background: -o-linear-gradient(left, @startColor 0%, @stopColor 100%);
+    background: -ms-linear-gradient(top, @startColor 0%, @stopColor 100%);
+    background: linear-gradient(to right, @startColor 0%, @stopColor 100%);
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@stopColor));
+  }
+
+  // Directional gradient
+  .directional(@startColor: #aaa, @stopColor: #000, @deg: 45deg) {
+      background-image: -moz-linear-gradient(@deg, @startColor, @stopColor);
+      background-image: -webkit-linear-gradient(@deg, @startColor, @stopColor);
+      background-image: -o-linear-gradient(@deg, @startColor, @stopColor); 
+      background-image: linear-gradient(@deg, @startColor, @stopColor);
+    
+      background-color: mix(@startColor, @stopColor, 60%);
+      background-repeat: repeat-x;
+  }
+  
+  // Radial gradient
+  .radial(@innerColor: #aaa, @outerColor: #000) {
+      background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
+      background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
+      background-image: -moz-radial-gradient(circle, @innerColor, @outerColor);
+      background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
+  
+      background-color: mix(@innerColor, @outerColor, 60%);
+      background-repeat: no-repeat;
+  }
+}

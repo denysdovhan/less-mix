@@ -1,0 +1,23 @@
+//     Shadow Tools
+// --------------------
+
+// Basic box shadow
+.box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow;
+       -moz-box-shadow: @shadow;
+            box-shadow: @shadow;
+}
+
+// Outer shadow
+.outer-shadow(@x: 0, @y: 1px, @blur: 2px, @alpha: 0.1) {
+    -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+            box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+
+// Inner shadow
+.inner-shadow(@x: 0, @y: 1px, @blur: 2px, @alpha: 0.4) {
+    -webkit-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
+            box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
+}

@@ -1,0 +1,5 @@
+.test {
+  -webkit-border-bottom-right-radius: 1px;
+  -moz-border-radius-bottomright: 1px;
+  border-bottom-right-radius: 1px;
+}

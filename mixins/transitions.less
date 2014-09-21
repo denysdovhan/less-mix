@@ -1,0 +1,33 @@
+//     Transition Tools
+// ------------------------
+
+// Transition
+.transition(@transition) {
+    -webkit-transition: @transition;
+       -moz-transition: @transition;
+         -o-transition: @transition;
+            transition: @transition;
+}
+
+// Transition all
+.transition-all(@duration: 0.2s, @delay: ease) {
+    -webkit-transition: all @duration @delay;
+       -moz-transition: all @duration @delay;
+         -o-transition: all @duration @delay;
+            transition: all @duration @delay;
+}
+
+// Transition duration
+.transition-duration(@transition-duration) {
+    -webkit-transition-duration: @transition-duration;
+       -moz-transition-duration: @transition-duration;
+         -o-transition-duration: @transition-duration;
+            transition-duration: @transition-duration;
+}
+// Transition delay
+.transition-delay(@transition-delay) {
+    -webkit-transition-delay: @transition-delay;
+       -moz-transition-delay: @transition-delay;
+         -o-transition-delay: @transition-delay;
+            transition-delay: @transition-delay;
+}

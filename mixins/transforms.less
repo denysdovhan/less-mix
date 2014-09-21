@@ -1,0 +1,26 @@
+//     Transform Tools
+// -----------------------
+
+// Basic transform
+.transform(@transform) {
+    -webkit-transform: @transform;
+       -moz-transform: @transform;
+        -ms-transform: @transform;
+         -o-transform: @transform;
+            transform: @transform;
+}
+
+// Rotate
+.rotate(@deg) {
+  .transform(rotate(@deg));
+}
+
+// Scale
+.scale(@ratio) {
+  .transform(scale(@ratio));
+}
+
+// Translate
+.translate(@x, @y) {
+  .transform(translate(@x, @y));
+}

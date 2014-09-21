@@ -1,0 +1,49 @@
+
+.for (@params; @rules; @step: 1) {
+	@from: extract(@params, 1);
+	@type: extract(@params, 2);
+	@to:   extract(@params, 3);
+
+	.valid() when not(@type = to) and not(@type = downto) {
+		@msg: ~`console.log("\n/* LESS-Mix: Syntax error, 'to' or 'downto' expected but '@{type}' found. */ ")`;
+	}
+
+	.valid() when not(iskeyword(@type)) {
+		@msg: ~`console.log("\n/* LESS-Mix: Syntax error, '@{type}' is not keyword. */\n")`;
+	}
+
+	.valid() when (@type = to) and (@from > @to) and (isnumber(@from)) and (isnumber(@to)) {
+		@msg: ~`console.log("\n/* LESS-Mix: Warning, @{from} greater than @{to}. */\n")`;
+	}
+
+	.valid() when (@type = downto) and (@from < @to) and (isnumber(@from)) and (isnumber(@to)) {
+		@msg: ~`console.log("\n/* LESS-Mix: Warning, @{from} less than @{to}. */\n")`;
+	}
+
+	.valid() when not(isnumber(@from)) {
+		@msg: ~`console.log("\n/* LESS-Mix: Error, '@{from}' is not number. */\n")`;
+	}
+
+	.valid() when not(isnumber(@to)) {
+		@msg: ~`console.log("\n/* LESS-Mix: Error, '@{to}' is not number. */\n")`;
+	}
+
+	.valid() when (@type = to),
+	              (@type = downto),
+	              (iskeyword(@type)),
+	              (isnumber(@from)),
+	              (isnumber(@to)) {
+		.loop(@i) when (@type = to) and (@i <= @to) {
+			@rules();
+			.loop(@i + @step);
+		}
+
+		.loop(@i) when (@type = downto) and (@i >= @to) {
+			@rules();
+			.loop(@i - @step);
+		}
+		.loop(@from);
+	}
+
+	.valid();
+}
