@@ -349,6 +349,7 @@ body {
   margin: 20px 2%;
   width: 46%;
   min-height: 150px;
+  border: 1px solid red;
   line-height: 19px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

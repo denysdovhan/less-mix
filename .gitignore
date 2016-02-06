@@ -2,9 +2,8 @@
 # Git Ignore File #
 ###################
 
-*.sublime-project
-*.sublime-workspace
-sftp-config.json
+node_modules/
+*.sublime-*
 *.txt
 *.zip
 *.rar

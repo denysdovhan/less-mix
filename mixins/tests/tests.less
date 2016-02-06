@@ -1,0 +1,34 @@
+@import "../center.less";
+@import "../for.less";
+
+/* Center
+------------------------*/
+
+/* .center(); */
+.center {
+	.center();
+}
+
+/* For Loop
+------------------------*/
+
+/* .for(1 to 3) */
+.for(1 to 3,{
+	.span-@{i} {
+		width: 150px * @i;
+	}
+});
+
+/* .for(3 to 1) -- Error! */
+.for(3 to 1, {
+	.span-@{i} {
+		width: 150px * @i;
+	}
+});
+
+/* for(3 downto 1) */
+.for(1 to 3,{
+	.span-@{i} {
+		width: 150px * @i;
+	}
+});

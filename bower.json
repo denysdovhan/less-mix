@@ -1,20 +1,23 @@
 {
   "name": "LESS-Mix",
-  "version": "2.0",
-  "homepage": "http://denysdovhan.github.io/LESS-Mix/",
+  "description": "Cross browser, comfortable and easy LESS mixins.",
+  "version": "2.0.0",
+  "keywords": [
+    "less",
+    "mixins",
+    "css",
+    "front-end",
+    "web"
+  ],
+  "homepage": "http://denysdovhan.github.io/less-mix/",
   "authors": [
     "Denys Dovhan <email@denysdovhan.com>"
   ],
-  "description": "Cross browser, comfortable and easy LESS mixins.",
-  "main": "lessmix.less",
+  "main": "build/lessmix.less",
   "ignore": [
-    "docs/"
-  ],
-  "keywords": [
-    "lessmix",
-    "less",
-    "mixins",
-    "css"
+    "/.*",
+    "docs/",
+    "mixins/"
   ],
   "license": "Apache 2.0"
 }

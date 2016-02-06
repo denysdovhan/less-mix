@@ -10,7 +10,6 @@
     "grunt-dom-munger": "^3.4.0"
   },
   "description": "LESS-Mix - cross browser, comfortable and easy LESS mixins.",
-  "main": "lessmix.less",
   "repository": {
     "type": "git",
     "url": "https://github.com/denysdovhan/less-mix.git"
