@@ -1,15 +1,17 @@
-LESS-Mix
+LESS-Mix ![derpecated](https://img.shields.io/badge/status-deprecated-red.svg?style=flat-square)
 ===========
+
+> :warning: **less-mix** is currently deprecated package. There are many better tools. Try [Autoprefixer](https://github.com/postcss/autoprefixer) for example.
 
 In English
 ----------
-__LESS-Mix__ - is a functional, powerful, convenient and easy at the same time (only __7.7kb__) library LESS-mixins. Despite its small size, the library has all the necessary functions. Library is cross-browser, so you can safely, quickly and effectively work.
+__LESS-Mix__ - is a functional, powerful, convenient and easy at the same time library LESS-mixins. Despite its small size, the library has all the necessary functions. Library is cross-browser, so you can safely, quickly and effectively work.
 
 ### How to Install ###
 1. Download file "lessmix.less".
 2. Place the it in the folder with your project.
 3. Include the library in your LESS-file at the beginning of the document, the command: `@import "lessmix.less"`;
- 
+
 ### How to use ###
 The library includes 27 mixins divided into 8 sections:
 
@@ -53,8 +55,8 @@ The library includes 27 mixins divided into 8 sections:
 
 ### Project ###
 
-The project created an enthusiast for all web designers, designed to simplify the work with the frequently used properties and make the code more readable and convenient. 
-The project __LESS-Mix__ - is an open-source code,and is based on the draft of the dynamic stylistic markup language [LESS](http://lesscss.org/) from [Alexis Sellier](http://cloudhead.io/). I will be grateful for the positive feedback well as for criticizing. 
+The project created an enthusiast for all web designers, designed to simplify the work with the frequently used properties and make the code more readable and convenient.
+The project __LESS-Mix__ - is an open-source code,and is based on the draft of the dynamic stylistic markup language [LESS](http://lesscss.org/) from [Alexis Sellier](http://cloudhead.io/). I will be grateful for the positive feedback well as for criticizing.
 Waiting for your feedbacks on the: [email@denysdovhan.com](mailto:email@denysdovhan.com)
 
 На Русском
@@ -83,13 +85,13 @@ __LESS-Mix__ - это функциональная, мощная, удобная
     * `.border-radius(@topRight, @bottomRight, @bottomLeft, @topLeft)` - устанавливает скругленые углы для каждого угла индивидуально. Значения задаются за часовой стрелкой начиная от верхнего правого угла. Значение по-умолчанию - 0.
 * __Shadow Tools__
     * `.box-shadow(@shadow)` - устанавливает тень. `@shadow` - строка параметров, например `inset 0 1px 2px #666`. Чтобы задать несколько значений теней (мультитень) используйте символ екранирования `~`, например `~"inset 0 1px 2px #666", 2px 1px 2px #000"`.
-    * `.outer-shadow(@x, @y, @blur, @alpha)` - добавляет к блоку тень. `@x` и `@y` отступы осей, `@blur` - сила размытия, `@alpha` - прозрачнось размытия (по-умолчанию: _0 1px 2px 0.1_). 
+    * `.outer-shadow(@x, @y, @blur, @alpha)` - добавляет к блоку тень. `@x` и `@y` отступы осей, `@blur` - сила размытия, `@alpha` - прозрачнось размытия (по-умолчанию: _0 1px 2px 0.1_).
     * `.inner-shadow(@x, @y, @blur, @alpha)` - добавляет внутренею тень. `@x` и `@y` отступы осей, `@blur` - сила размытия, `@alpha` - сила тени (по-умолчанию: _0 1px 2px 0.4_).
 * __Transition Tools__
     * `.transition(@transition)` - устанавливает параметры анимации. Чтобы задать несколько значений используйте символ экранирования `~` как у свойства `.box-shadow()`.
     * `.transition-all(@duration, @delay)` - устанавливает анимацию всех свойств. `@duration` - время анимации в секундах (по-умолчанию: _0.2s_), @`delay` - тип анимацыи (по-умолчанию: _ease_).
     * `.transition-duration(@transition-duration)` - устанавливает времья анимации в секундах.
-    * `.transition-delay(@transition-delay)` - устанавливает тип анимации. 
+    * `.transition-delay(@transition-delay)` - устанавливает тип анимации.
 * __Transform Tools__
     * `.transform(@transform)` - задает значения трансформации. Принимает любые значения, но желательно использовать символ экранирования `~`, как у `.box-shadow()`.
     * `.rotate(@deg)` - вращает элемент на указаное количество градусов `@deg`.
